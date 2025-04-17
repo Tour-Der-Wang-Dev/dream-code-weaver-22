@@ -14,6 +14,44 @@ import {
   Camera, 
   Leaf 
 } from 'lucide-react';
+import ContentPage from '@/components/ContentPage';
+
+// Sample data for ContentPage
+const sampleDestinations = [
+  {
+    name: 'วัดภูแก้ว',
+    description: 'วัดเก่าแก่ที่มีประวัติศาสตร์ยาวนาน เป็นศูนย์รวมทางจิตใจของชาวบ้านในพื้นที่',
+    image: '/placeholder.svg'
+  },
+  {
+    name: 'อ่างเก็บน้ำน้ำฮี',
+    description: 'แหล่งน้ำธรรมชาติที่สวยงาม เหมาะแก่การพักผ่อนหย่อนใจและทำกิจกรรมกลางแจ้ง',
+    image: '/placeholder.svg'
+  },
+  {
+    name: 'พิพิธภัณฑ์วัฒนธรรมภูไท',
+    description: 'ศูนย์เรียนรู้วิถีชีวิต ประเพณี และวัฒนธรรมของชาวภูไทที่น่าสนใจ',
+    image: '/placeholder.svg'
+  },
+];
+
+const sampleProducts = [
+  {
+    name: 'ผ้าทอภูไทลายขอ',
+    price: 2500,
+    details: 'ผ้าทอมือชั้นดีด้วยภูมิปัญญาที่สืบทอดมาหลายชั่วอายุคน ด้วยลวดลายอันเป็นเอกลักษณ์'
+  },
+  {
+    name: 'เครื่องเงินภูไทโบราณ',
+    price: 1200,
+    details: 'เครื่องประดับที่ทำจากเงินแท้ ออกแบบตามแบบฉบับดั้งเดิม สวยงามและมีคุณค่า'
+  },
+  {
+    name: 'น้ำปลาร้าสูตรดั้งเดิม',
+    price: 180,
+    details: 'น้ำปลาร้าที่หมักตามสูตรโบราณ รสชาติกลมกล่อม เข้มข้น เป็นที่นิยมของคนท้องถิ่น'
+  },
+];
 
 const Index = () => {
   return (
@@ -77,6 +115,12 @@ const Index = () => {
           ))}
         </div>
       </div>
+      
+      {/* Content Page with Destinations and Products */}
+      <ContentPage 
+        destinations={sampleDestinations} 
+        products={sampleProducts} 
+      />
     </div>
   );
 };
