@@ -1,12 +1,14 @@
-$ nvm use 16
-Now using node v16.9.1 (npm v7.21.1)
-$ node -v
-v16.9.1
-$ nvm use 14
-Now using node v14.18.0 (npm v6.14.15)
-$ node -v
-v14.18.0
-$ nvm install 12
-Now using node v12.22.6 (npm v6.14.5)
-$ node -v
-v12.22.6
+            - name: Convert 3D files directory with KittyCAD
+  # You may pin to the exact commit or the version.
+  # uses: KittyCAD/action-convert-directory@94f695ed3d7206d1a5f065eb9166ef318b68a3a6
+  uses: KittyCAD/action-convert-directory@v0.0.2
+  with:
+    # KittyCAD API TOKEN, generated at https://kittycad.io/account
+    kittycad-token: 
+    # folder containing files to be converted, allowed files are dae, fbx, obj, step and stl
+    input-directory: 
+    # folder where converted files will be put
+    output-directory: 
+    # options are dae, fbx, fbxb, obj, step and stl
+    conversion-type: 
+          
